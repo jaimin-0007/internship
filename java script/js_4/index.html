@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Q1</h1>
+    <script>
+        let x=10;
+        let y=x+5;
+        console.log(x);
+        console.log(y);
+    </script>
+
+    <h1>Q2</h1>
+    <input type="number" name="num" id="num" />
+    <button type="button">Square</button>
+    <p id="square"></p>
+    <script>
+        let n = document.getElementById('num').value;
+        function square(n){   
+            return n*n;
+        }
+        document.getElementById('square').innerHTML= n;  
+    </script>
+
+    <h1>Q3</h1>
+    <p id="push-fruits"></p>
+    <p id="sorted-fruits"></p>
+    <script>
+        let fruits = ["Apple", "Banana", "Mango"];
+        fruits.push("Orange");
+        document.getElementById('push-fruits').innerHTML = fruits;
+        fruits.push("Pineple");
+        fruits.sort();
+        fruits.reverse();
+        document.getElementById('sorted-fruits').innerHTML = fruits;
+    </script>
+
+    <h1>Q4</h1>
+    <script>
+        for(let i=1;i<=10;i++){
+            console.log(i);
+        }
+    </script>
+
+    <h1>Q5</h1>
+    <input type="text" name="string1" id="string1"/> 
+    <button type="button" onclick="submit()">submit</button>
+    <p id="upperstr1"></p>
+    <p id="lenghstr1"></p>
+    <script>
+        function submit(){
+            let text = document.getElementById("string1").value; 
+            document.getElementById("upperstr1").innerHTML = text.toUpperCase();
+            document.getElementById("lenghstr1").innerHTML = text.length;
+        }
+    </script>
+    <h1>Q6</h1>
+    <script>
+        let car = {
+            make : "toyota",
+            model : "camry",
+            year : "2022"
+        };
+        console.log(car.make);
+        console.log(car.model);
+    </script>
+
+    <h1>Q7</h1>
+    <input type="text" name="num1" id="num1" />
+    <button type="button" onclick="check()">Submit</button>
+    <p id="result"></p>
+    <script>
+        function check(){
+            let number1 = document.getElementById('num1').value;
+            if(number1%2 == 0){
+                document.getElementById("result").innerHTML = "Even";
+            }
+            else{
+                document.getElementById("result").innerHTML = "Odd";   
+            }
+        }
+    </script>
+    <h1>Q8</h1>
+    <p>Before array : </p>
+    <p id="br"></p>
+    <p>After sqaure of array</p>
+    <p id="ar"></p>
+    <script>
+        let arr=[1,2,3,4,5];
+        document.getElementById('br').innerHTML = arr;
+        const square=(arr)=>arr.map(num=>num*num);
+        document.getElementById('ar').innerHTML = square(arr);
+    </script>
+
+
+    <h1>Q9</h1>
+
+    <script>
+        let str= "1234Hello";
+        function parseStringToNumber(str) {
+        try {
+            const number = parseInt(str);
+
+            if (isNaN(number)) {
+            throw new Error("Invalid number format. Cannot convert to a number.");
+            }
+            document.getElementById("Parsed number:", number);
+        } catch (error) {
+            alert("Error:", error.message);
+        }
+        
+        }
+    </script>
+</body>
+</html>

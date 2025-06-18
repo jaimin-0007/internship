@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <h1>1. Object</h1>
+    <h3>Without object</h3>
+    <p id="demo1"></p>
+    <script>
+        let car = "benz";
+        let model = "eclass";
+        document.getElementById("demo1").innerHTML = car+model;
+    </script>
+
+    <h3>With object</h3>
+    <p id="demo2"></p>
+    <script>
+        const car1 = {name : "Benz",model:"eclass",price:"2cr"};
+        document.getElementById("demo2").innerHTML="Car name is " + car1.name;
+    </script>
+
+    <h1>2. Events</h1>
+    <h3>click events</h3>
+    <button type="button" onclick="document.getElementById('demo3').innerHTML=Date()">Time</button>
+    <p id="demo3"></p>
+
+    <h3>On mouse events</h3>
+    <h5 id="demo4" onmouseover="big()">onmouse event</h5>
+    <h5 id="demo5" onmouseout="small()">onmouse out</h5>
+
+    <script>
+        function big()
+        {
+            document.getElementById("demo4").innerHTML="the text is changed by using onmouse over event";
+        }
+        function small()
+        {
+            document.getElementById("demo5").innerHTML="the text is changed by using onmouse out event";
+        }
+    </script>
+
+    <h3>DB click event</h3>
+    <p ondblclick="double()">Double click to view</p>
+    <p id="demo6"></p>
+    <script>
+        function double()
+        {
+            document.getElementById("demo6").innerHTML = "Hello World!";
+        }
+    </script>
+
+
+    <h1>3. String methods</h1>
+    <h3>length</h3>
+    <p>string is :</p> <p id="string"></p>
+    <p>lnegth is :</p>
+    <p id="demo8"></p>
+
+    <script>
+        let text = "jaimin";
+        document.getElementById("string").innerHTML = text;
+        document.getElementById("demo8").innerHTML = text.length;
+    </script>
+
+    <h3>slice</h3>
+    <p id="slice"></p>
+    <script>
+        let text1="Hello World!";
+        document.getElementById("slice").innerHTML = text1.slice(3,9);
+    </script>
+
+    <h3>substring</h3>
+    <p id="substring"></p>
+    <script>
+        let text2= "Hello world!!!"
+        document.getElementById("substring").innerHTML = text2.substring(3,9);
+    </script>
+
+    <h3>substr</h3>
+    <p id="substr"></p>
+    <script>
+        let text3 = "Hello world!!!";
+        document.getElementById("substr").innerHTML = text3.substr(3,9);
+
+    </script>
+
+    <h3>Replace</h3>
+    <p id="string1"></p> <p>after Replace:</p>
+    <p id="Replace"></p>
+    <script>
+        let text4 = "Hello world  world!!";
+        document.getElementById("string1").innerHTML=text4;
+        document.getElementById("Replace").innerHTML = text4.replace("world","javascript");
+    </script>
+
+    <h3>replace all</h3>
+    <p id="string2"></p> 
+    <p id="replaceall"></p>
+
+    <script>
+        let text5="hello world world!!!";
+        document.getElementById("string2").innerHTML = text5;
+        document.getElementById("replaceall").innerHTML = text5.replaceAll("world","javascript");
+    </script>
+
+    <h3>To upper and lower</h3>
+    <p id="upper"></p>
+    <p id="lower"></p>
+    <script>
+        let text6="Hello";
+        document.getElementById("upper").innerHTML = text6.toUpperCase();
+        document.getElementById("lower").innerHTML = text6.toLowerCase();
+    </script>
+
+    <h3>Concat</h3>
+    <p id="concat"></p>
+    <script>
+        let first = "Hello";
+        let second = "World";
+        document.getElementById("concat").innerHTML = first.concat(second);
+    </script>
+
+    <h3>trim, trim start, trim end</h3>
+    <p id="trim"></p>
+    <p id="trimstart"></p>
+    <p id="trimend"></p>
+    <script>
+        let text7 = "   Hello World   ";
+        let text8 = "   Hello World     /n   kkkkk"
+        console.log(text7)
+        document.getElementById("trim").innerHTML = text7.trim();
+        document.getElementById("trimstart").innerHTML = text8.trimStart();
+        document.getElementById("trimend").innerHTML = text7.trimEnd();
+    </script>
+
+    <h3>pad start, pad end</h3>
+    <p id="padstart"></p>
+    <p id="padend"></p>
+    <script>
+        let num="5";
+        document.getElementById("padstart").innerHTML = num.padStart(4,"0");
+        document.getElementById("padend").innerHTML = num.padEnd(4,"0");
+    </script>
+
+    <h3>Char at, char code at</h3>
+    <p id="charat"></p>
+    <p id="charcodeat"></p>
+    <script>
+        let text9= "Hello world";
+        document.getElementById("charat").innerHTML = text9.charAt(3);
+        document.getElementById("charcodeat").innerHTML = text9.charCodeAt(3);
+    </script>
+
+    <h3>Split</h3>
+    <p id="split"></p>
+    <script>
+        let text10 = "How are you doing today?";
+        document.getElementById("split").innerHTML = text10.split(" ");
+    </script>
+
+    <h3>match and space match</h3>
+    <p id="match"></p>
+    <p id="spacematch"></p>
+    <script>
+        let text11="hello world world woRLD";
+        document.getElementById("match").innerHTML = text11.match("rld");
+        const myArr = text11.match(/rld/g);
+        document.getElementById("spacematch").innerHTML = myArr.length + " " + myArr;
+        
+    </script>
+</body>
+</html>

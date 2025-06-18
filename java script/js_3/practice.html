@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Practice 1(objects)</h1>
+    
+    <h2>Task 1</h2>
+    sum: <p id="sum"></p> avg: <p id="avg"></p>
+    <script>
+        const student = {name: "jaimin", age: "19", marks: [87,54,89,85,74]};
+        let sum = 0
+        for(let i=0;i<student.marks.length;i++){
+            sum = sum + student.marks[i];
+        }
+        document.getElementById("sum").innerHTML = sum;
+        let avg = sum / student.marks.length;
+        document.getElementById("avg").innerHTML = avg;
+    </script>
+
+
+    <h2>Task 2</h2>
+    <p id="car"></p>
+    <script>
+        let car = {brand: "Toyota", model: "Fortuner", fuel: "Diesel"};
+        function printCarDetails(obj){
+            document.getElementById("car").innerHTML = "Brand: " + obj.brand +" ,Model: " + obj.model + " ,Fuel: " + obj.fuel;
+        }
+        let result = printCarDetails(car);  
+    </script>
+
+
+
+
+
+    <h2>Task 3</h2>
+    <div id="library"></div>
+    <script>
+        const library={
+            books:[
+                    { title: "The art of being alon", author: "Renuka Gavrani", read: true },
+                    { title: "The Guide", author: "R.K.Narayan", read: false },
+                    { title: "Ikigai", author: "Héctor García", read: true },
+                    { title: "The art of letting go", author: "Rania Naim", read: false }
+            ]
+        }
+        let op="";
+        for(let i=0;i<library.books.length;i++){
+            let book = library.books[i];
+            if(book.read){
+                op+=`You have read "${book.title}" by "${book.author}".<br>`;
+            }else{
+                op+=`You have not read "${book.title}" by "${book.author}".<br>`;
+            }
+        }
+        document.getElementById('library').innerHTML=op;
+    </script>
+    
+
+    <h1>Practice 2(events)</h1>
+    <h2>Task 1</h2>
+    <button type="button" onclick="alert('you clicked the button')">Click Me</button>
+
+    <h2>Task 2</h2>
+    <input type="text" id="textInput" placeholder="Start typing..." />
+    <div id="outputDiv"></div>
+
+    <script>
+        const inputField = document.getElementById('textInput');
+        const outputDiv = document.getElementById('outputDiv');
+
+        inputField.addEventListener('input', function () {
+        outputDiv.textContent = inputField.value;
+        });
+    </script>
+
+    <h2>Task 3</h2>
+    <button type="button" onclick="count()">Click Here</button>
+    <p id="count_num"></p>
+    <script>
+        let num = 0;
+        function count(){
+            num +=1;
+            document.getElementById("count_num").innerHTML = num;
+        }
+    </script>
+
+    <h2>bonus task</h2>
+    <button type="button" id="red" onclick="background('red')">Red</button>
+    <button type="button" id="green" onclick="background('green')">Green</button>
+    <button type="button" id="blue" onclick="background('blue')">Blue</button>
+    <script>
+        function background(color){
+            document.body.style.backgroundColor = color;            
+        }
+    </script>
+
+
+    <h1>Practice 3(String methods)</h1>
+    <h2>Task 1</h2>
+    <button onclick="ms()">Transform String</button>
+    <div id="trans"></div>  
+    <script>
+    function ms() {
+        let str = " JavaScript is Awesome! ";
+        str = str.trim();                  
+        str = str.toLowerCase();           
+        str = str.replace("awesome", "powerful"); 
+        document.getElementById("trans").innerHTML = str;
+    }
+    </script>
+
+    <h2>Task 2</h2>
+    <input type="text" id="text" placeholder="Enter text here..." />
+    <button onclick="countvowel()">Count Vowels</button>
+    <div id="total"></div>
+    <script>
+    function countvowel() {
+      let str = document.getElementById("text").value;
+      let count = 0;
+      const vowels = "aeiouAEIOU";
+      for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i])) {
+          count++;
+        }
+      }
+      document.getElementById("total").innerHTML = "Number of vowels: " + count;
+    }
+    </script>
+
+    <h2>Task 3</h2>
+    <input type="text" id="user" placeholder="Enter username" />
+    <button onclick="validation()">Validate</button>
+    <div id="r2"></div>
+    <script>
+    function validation() {
+      const username = document.getElementById("user").value;
+      const re= /^[a-zA-Z0-9_]+$/;
+      if (re.test(username)) {
+        document.getElementById("r2").innerHTML = "Valid username";
+        document.getElementById("r2").style.color = "green";
+      } else {
+        document.getElementById("r2").innerHTML = "Invalid username";
+        document.getElementById("r2").style.color = "red";
+      }
+    }
+    </script>
+
+    <h2>Task 4</h2>
+    <input type="text" name="string1" id="string1" />
+    <button type="button" onclick="reverse()">Reverse</button>
+    <p id="reverse_string"></p>
+
+    <script>
+    function reverse() {
+      const input = document.getElementById("string1").value;
+      let reversed = "";
+      for (let i = input.length - 1; i >= 0; i--) {
+        reversed += input[i];
+      }
+      document.getElementById("reverse_string").innerHTML = "Reversed: " + reversed;
+    }
+    </script>
+</body>
+</html>
