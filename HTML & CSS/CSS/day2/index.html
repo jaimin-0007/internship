@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+        h3{
+            font-weight: bold;
+            text-align: center;
+        }
+        p{
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+        }
+        a{
+            color : rgb(0, 162, 255);
+            text-decoration: none;
+        }
+        .f p{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            margin: 20px;
+            border: red solid;
+            text-align: center;
+            align-content: center;
+        }
+         
+        .container{
+            border: rgb(141, 233, 254) solid;
+            height: 205px;
+            flex-direction: row;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            justify-content: baseline;
+        }
+
+        .first ,.second, .third {
+            border: red solid;
+            height: 200px;
+            width: 200px;   
+        }
+        .img-container{
+            height: 200px;
+            width: 500px;
+            border: 5px rgb(255, 55, 72) solid;
+            border-radius: 50px;
+        }
+        img{
+            height: 200px;
+            width: 500px;
+            border-radius: 40px;
+        }
+
+        li:hover{
+           background-color: rgb(127, 138, 255);
+        }
+
+        li::before{
+            color: rgb(205, 213, 255);
+        }
+
+
+        input{
+            border: 1px black solid;
+            border-radius: 5px;
+            padding: 5px;
+            transition: border-color  0.5, box-shadow 0.5s;
+        }
+        input:focus{
+            border-color: aquamarine;
+            transition: border-color  0.5, box-shadow 0.5s;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Question 1</h1>
+    <h3>Heading</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto asperiores voluptate consequuntur soluta totam 
+        tempora magnam a laboriosam. Autem cum porro soluta ut explicabo pariatur at unde, esse distinctio tenetur.</p>
+    <a href="google.com">link</a>
+
+    <h1>Question 2</h1>
+    <div class="f">
+        <p>first</p>
+    </div> 
+
+    <h1>Question 3</h1>
+    <div class="container">
+        <div class="first"></div>
+        <div class="second"></div>
+        <div class="third"></div>
+    </div>
+
+    <h1>Question 4</h1>
+    <ol>
+        <li>abc</li>
+        <li>abc</li>
+        <li>abc</li>
+    </ol>
+
+    <h1>Question 5</h1>
+    <form action="" method="post">
+        <label for="name">Name :</label>
+        <input type="text" name="name" id="name" placeholder="name"><br>
+        <label for="mail">Email :</label>
+        <input type="email" name="mail" id="mail" placeholder="mail"><br>
+        <input type="submit" value="submit">
+    </form>
+
+    <h1>Question 6</h1>
+    <div class="img-container">
+        <img src="1.png" alt="img">
+    </div>
+
+    <h1>Question 7</h1>
+    <i class="fa-solid fa-code">       hello devloper </i>
+
+    
+</body>
+</html>
