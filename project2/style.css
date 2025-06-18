@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+ul,a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: large;
+}
+
+.slider{
+    height: 700px;
+    background-color: aqua;
+}
+
+.part3{
+    margin-top: 100px;
+    background-color: rgb(179, 179, 179);
+    height: 30rem;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+button{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #2690FB;
+    border: #2690FB;
+    border-radius: 4px;
+    justify-content: center;
+    cursor: pointer;
+}
+.img-box{
+    margin: 2rem 38rem;
+    align-content: center;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cards{
+
+    border: 2px solid black;
+    border-radius: 3px;
+}
